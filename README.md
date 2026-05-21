@@ -5,7 +5,7 @@ PostgreSQL 数据库操作组件，为 Financial Hub 系统中的各爬虫提供
 ## 安装
 
 ```bash
-pip install git+https://github.com/用户名/financial_hub_postgres.git
+pip install git+https://github.com/LeXrLt/financial_hub_postgres.git
 ```
 
 ## 快速开始
