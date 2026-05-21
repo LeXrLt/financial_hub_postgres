@@ -28,3 +28,25 @@ class CrawlTarget:
         """Create a CrawlTarget instance from a database row."""
         data = dict(zip(columns, row))
         return cls(**data)
+
+
+@dataclass
+class CrawlRun:
+    """Represents a row in the crawl_runs table."""
+
+    id: int
+    target_id: int
+    status: str = "running"
+    started_at: Optional[datetime] = None
+    finished_at: Optional[datetime] = None
+    items_found: int = 0
+    items_new: int = 0
+    items_failed: int = 0
+    error_message: Optional[str] = None
+    duration_ms: Optional[int] = None
+
+    @classmethod
+    def from_row(cls, row: tuple, columns: list) -> "CrawlRun":
+        """Create a CrawlRun instance from a database row."""
+        data = dict(zip(columns, row))
+        return cls(**data)

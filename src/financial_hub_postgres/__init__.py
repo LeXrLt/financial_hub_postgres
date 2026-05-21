@@ -1,4 +1,4 @@
 from .client import FinancialHubClient
-from .models import CrawlTarget
+from .models import CrawlRun, CrawlTarget
 
-__all__ = ["FinancialHubClient", "CrawlTarget"]
+__all__ = ["FinancialHubClient", "CrawlRun", "CrawlTarget"]
